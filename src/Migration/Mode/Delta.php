@@ -76,7 +76,7 @@ class Delta extends AbstractMode implements \Migration\App\Mode\ModeInterface
      */
     public function run()
     {
-        do {
+        //do {
             /** @var StepList $steps */
             $steps = $this->stepListFactory->create(['mode' => 'delta']);
             /**
@@ -111,7 +111,7 @@ class Delta extends AbstractMode implements \Migration\App\Mode\ModeInterface
                 $this->logger->info("Automatic restart in {$this->autoRestart} sec. Use CTRL-C to abort");
                 sleep($this->autoRestart);
             }
-        } while ($this->autoRestart);
+        //} while ($this->autoRestart);
         return true;
     }
 
